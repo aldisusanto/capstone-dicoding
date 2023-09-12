@@ -1,7 +1,0 @@
-com.next.up.code.favorite-pngs-0 D:\Aldi Susanto\capstone\favorite\build\generated\res\pngs\debug
-com.next.up.code.favorite-resValues-1 D:\Aldi Susanto\capstone\favorite\build\generated\res\resValues\debug
-com.next.up.code.favorite-packageDebugResources-2 D:\Aldi Susanto\capstone\favorite\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.next.up.code.favorite-packageDebugResources-3 D:\Aldi Susanto\capstone\favorite\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.next.up.code.favorite-merged_res-4 D:\Aldi Susanto\capstone\favorite\build\intermediates\merged_res\debug
-com.next.up.code.favorite-debug-5 D:\Aldi Susanto\capstone\favorite\src\debug\res
-com.next.up.code.favorite-main-6 D:\Aldi Susanto\capstone\favorite\src\main\res

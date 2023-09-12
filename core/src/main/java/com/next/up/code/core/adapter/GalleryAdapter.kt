@@ -1,24 +1,16 @@
 package com.next.up.code.core.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.next.up.code.core.databinding.ItemGalleryBinding
 import com.next.up.code.core.domain.model.GalleryTouristAttraction
 import com.squareup.picasso.Picasso
 
-class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
-    private var listItem = ArrayList<GalleryTouristAttraction>()
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun setData(newGalleryTouristAttraction: List<GalleryTouristAttraction>?) {
-        if (newGalleryTouristAttraction == null) return
-        listItem.clear()
-        listItem.addAll(newGalleryTouristAttraction)
-        notifyDataSetChanged()
-    }
-
+class GalleryAdapter :
+    ListAdapter<GalleryTouristAttraction, GalleryAdapter.ViewHolder>(diffCallback) {
 
     inner class ViewHolder(private val binding: ItemGalleryBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -31,8 +23,6 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
                     .into(carouselImageView)
                 tvName.text = galleryItem.name
             }
-
-
         }
     }
 
@@ -43,10 +33,25 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = listItem[position]
+        val data = getItem(position)
         holder.bind(data)
     }
 
-    override fun getItemCount(): Int = listItem.size
+    companion object {
+        private val diffCallback = object : DiffUtil.ItemCallback<GalleryTouristAttraction>() {
+            override fun areItemsTheSame(
+                oldItem: GalleryTouristAttraction,
+                newItem: GalleryTouristAttraction
+            ): Boolean {
+                return oldItem.id == newItem.id
+            }
 
+            override fun areContentsTheSame(
+                oldItem: GalleryTouristAttraction,
+                newItem: GalleryTouristAttraction
+            ): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
 }

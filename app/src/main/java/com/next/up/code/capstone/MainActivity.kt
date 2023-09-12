@@ -46,5 +46,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 
 }

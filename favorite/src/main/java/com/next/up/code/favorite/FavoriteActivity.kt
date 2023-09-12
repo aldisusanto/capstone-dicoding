@@ -31,7 +31,7 @@ class FavoriteActivity : AppCompatActivity() {
     private fun setupFavoriteList() {
         viewModel.touristAttraction.observe(this@FavoriteActivity) {
             val touristAttractionAdapter = TouristAttractionAdapter()
-            touristAttractionAdapter.setData(it)
+            touristAttractionAdapter.submitList(it)
             Utils.setupRecycleView(touristAttractionAdapter, binding?.rvTouristAttraction, this)
             touristAttractionAdapter.setOnItemClickCallback(object :
                 TouristAttractionAdapter.OnItemClickCallback {

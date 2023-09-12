@@ -1,26 +1,16 @@
 package com.next.up.code.core.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.next.up.code.core.R
 import com.next.up.code.core.databinding.ItemTicketsBinding
 import com.next.up.code.core.domain.model.Ticket
 import com.next.up.code.core.utils.Utils.withCurrencyFormat
 
-class TicketAdapter : RecyclerView.Adapter<TicketAdapter.ViewHolder>() {
-    private var listItem = ArrayList<Ticket>()
-
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun setData(newTicket: List<Ticket>?) {
-        if (newTicket == null) return
-        listItem.clear()
-        listItem.addAll(newTicket)
-        notifyDataSetChanged()
-    }
-
+class TicketAdapter : ListAdapter<Ticket, TicketAdapter.ViewHolder>(diffCallback) {
 
     inner class ViewHolder(private val binding: ItemTicketsBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -41,7 +31,6 @@ class TicketAdapter : RecyclerView.Adapter<TicketAdapter.ViewHolder>() {
 
                 tvPrice.text = ticketItem.price.withCurrencyFormat()
             }
-
         }
     }
 
@@ -52,10 +41,19 @@ class TicketAdapter : RecyclerView.Adapter<TicketAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = listItem[position]
+        val data = getItem(position)
         holder.bind(data)
     }
 
-    override fun getItemCount(): Int = listItem.size
+    companion object {
+        private val diffCallback = object : DiffUtil.ItemCallback<Ticket>() {
+            override fun areItemsTheSame(oldItem: Ticket, newItem: Ticket): Boolean {
+                return oldItem.id == newItem.id // Ganti dengan properti unik yang Anda miliki
+            }
 
+            override fun areContentsTheSame(oldItem: Ticket, newItem: Ticket): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
 }

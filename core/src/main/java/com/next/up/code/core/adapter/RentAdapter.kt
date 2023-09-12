@@ -1,24 +1,15 @@
 package com.next.up.code.core.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.next.up.code.core.databinding.ItemRentBinding
 import com.next.up.code.core.domain.model.Rent
 import com.next.up.code.core.utils.Utils.withCurrencyFormat
 
-class RentAdapter : RecyclerView.Adapter<RentAdapter.ViewHolder>() {
-    private var listItem = ArrayList<Rent>()
-
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun setData(newRent: List<Rent>?) {
-        if (newRent == null) return
-        listItem.clear()
-        listItem.addAll(newRent)
-        notifyDataSetChanged()
-    }
+class RentAdapter : ListAdapter<Rent, RentAdapter.ViewHolder>(diffCallback) {
 
     inner class ViewHolder(private val binding: ItemRentBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -29,7 +20,6 @@ class RentAdapter : RecyclerView.Adapter<RentAdapter.ViewHolder>() {
                 tvPlace.text = rentItem.placeName
                 tvPrice.text = rentItem.price.withCurrencyFormat()
             }
-
         }
     }
 
@@ -40,10 +30,19 @@ class RentAdapter : RecyclerView.Adapter<RentAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = listItem[position]
+        val data = getItem(position)
         holder.bind(data)
     }
 
-    override fun getItemCount(): Int = listItem.size
+    companion object {
+        private val diffCallback = object : DiffUtil.ItemCallback<Rent>() {
+            override fun areItemsTheSame(oldItem: Rent, newItem: Rent): Boolean {
+                return oldItem.id == newItem.id // Ganti dengan properti unik yang Anda miliki
+            }
 
+            override fun areContentsTheSame(oldItem: Rent, newItem: Rent): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
 }

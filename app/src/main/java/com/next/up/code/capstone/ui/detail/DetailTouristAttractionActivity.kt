@@ -89,7 +89,7 @@ class DetailTouristAttractionActivity : BaseActivity() {
                 is Resource.Success -> {
                     progress.dismiss()
                     val response = responseData.data
-                    ticketAdapter.setData(response)
+                    ticketAdapter.submitList(response)
                     binding?.apply {
                         if (response?.isEmpty() == true) {
                             binding?.rvTicket?.visibility = View.GONE
@@ -121,7 +121,7 @@ class DetailTouristAttractionActivity : BaseActivity() {
                 is Resource.Success -> {
                     progress.dismiss()
                     val response = responseData.data
-                    rentAdapter.setData(response)
+                    rentAdapter.submitList(response)
                     binding?.apply {
                         if (response?.isEmpty() == true) {
                             binding?.tvTitlePricePlace?.visibility = View.GONE
@@ -184,7 +184,7 @@ class DetailTouristAttractionActivity : BaseActivity() {
                 is Resource.Success -> {
                     progress.dismiss()
                     val response = responseData.data
-                    galleryAdapter.setData(response)
+                    galleryAdapter.submitList(response)
                 }
 
                 is Resource.Loading -> {
@@ -206,6 +206,14 @@ class DetailTouristAttractionActivity : BaseActivity() {
 
     private fun setFavorite(isFavorite: Boolean) {
         binding?.btnFavorite?.isChecked = isFavorite
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Picasso.get().cancelRequest(binding!!.ivCover)
+        youTubePlayer?.release()
+        youTubePlayer = null
+        _binding = null
     }
 
 

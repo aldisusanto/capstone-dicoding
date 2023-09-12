@@ -47,7 +47,7 @@ class HomeFragment : BaseFragment() {
                 is Resource.Success -> {
                     progress.dismiss()
                     val response = responseData.data
-                    touristAttractionAdapter.setData(response)
+                    touristAttractionAdapter.submitList(response)
                     attractionItems.addAll(response!!)
                 }
 
@@ -95,7 +95,7 @@ class HomeFragment : BaseFragment() {
             }
         }
 
-        touristAttractionAdapter.setData(filterAttractionItem)
+        touristAttractionAdapter.submitList(filterAttractionItem)
         setupRecycleView(touristAttractionAdapter, binding?.rvTouristAttraction, requireContext())
         setupListener(touristAttractionAdapter)
     }

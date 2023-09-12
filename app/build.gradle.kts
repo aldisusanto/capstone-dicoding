@@ -1,8 +1,7 @@
 plugins {
-
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -21,12 +20,13 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+
     }
 
     compileOptions {
@@ -53,6 +53,7 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
 
     implementation(project(mapOf("path" to ":core")))
 
@@ -86,7 +87,7 @@ dependencies {
     /* Room */
     implementation("androidx.room:room-runtime:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
+    ksp("androidx.room:room-compiler:2.5.2")
 
     implementation("com.google.android.gms:play-services-maps:18.1.0")
 

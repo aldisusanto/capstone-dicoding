@@ -1,26 +1,18 @@
 package com.next.up.code.core.adapter
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.next.up.code.core.databinding.ItemTouristAttractionBinding
 import com.next.up.code.core.domain.model.TouristAttraction
 import com.squareup.picasso.Picasso
 
 class TouristAttractionAdapter :
-    RecyclerView.Adapter<TouristAttractionAdapter.ViewHolder>() {
-    private var listItem = ArrayList<TouristAttraction>()
+    ListAdapter<TouristAttraction, TouristAttractionAdapter.ViewHolder>(diffCallback) {
+
     private var onItemClickCallback: OnItemClickCallback? = null
-
-
-    @SuppressLint("NotifyDataSetChanged")
-    fun setData(newListItem: List<TouristAttraction>?) {
-        if (newListItem == null) return
-        listItem.clear()
-        listItem.addAll(newListItem)
-        notifyDataSetChanged()
-    }
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback
@@ -48,13 +40,29 @@ class TouristAttractionAdapter :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data = listItem[position]
+        val data = getItem(position)
         holder.bind(data)
     }
 
-    override fun getItemCount(): Int = listItem.size
-
     interface OnItemClickCallback {
         fun onItemClicked(touristAttractionItem: TouristAttraction)
+    }
+
+    companion object {
+        private val diffCallback = object : DiffUtil.ItemCallback<TouristAttraction>() {
+            override fun areItemsTheSame(
+                oldItem: TouristAttraction,
+                newItem: TouristAttraction
+            ): Boolean {
+                return oldItem.touristAttractionId == newItem.touristAttractionId // Ganti dengan properti unik yang Anda miliki
+            }
+
+            override fun areContentsTheSame(
+                oldItem: TouristAttraction,
+                newItem: TouristAttraction
+            ): Boolean {
+                return oldItem == newItem
+            }
+        }
     }
 }

@@ -11,6 +11,8 @@ import com.next.up.code.core.domain.repository.ICoreRepository
 import com.next.up.code.core.domain.usecase.CoreInteract
 import com.next.up.code.core.domain.usecase.CoreUseCase
 import com.next.up.code.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -28,9 +30,11 @@ val repositoryModule = module {
 val databaseModule = module {
     factory { get<CapstoneDatabase>().touristAttractionDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("capstone".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             CapstoneDatabase::class.java, "Capstone.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().openHelperFactory(factory).build()
     }
 }
