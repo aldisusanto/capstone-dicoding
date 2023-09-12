@@ -1428,12 +1428,9 @@ int color cardview_shadow_end_color 0x7f06003a
 int color cardview_shadow_start_color 0x7f06003b
 int color colorAccent 0x7f06003c
 int color colorBgDetail 0x7f06003d
-int color colorEnd 0x7f06003e
 int color colorPrimary 0x7f06003f
 int color colorPrimaryDark 0x7f060040
-int color colorSecondary 0x7f060041
 int color colorStand 0x7f060042
-int color colorStart 0x7f060043
 int color colorTransparent 0x7f060044
 int color common_google_signin_btn_text_dark 0x7f060045
 int color common_google_signin_btn_text_dark_default 0x7f060046

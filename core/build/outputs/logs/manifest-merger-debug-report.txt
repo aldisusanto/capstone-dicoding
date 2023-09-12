@@ -4,8 +4,6 @@ ADDED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml:2:1-4:12
 INJECTED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml:2:1-4:12
 	package
 		INJECTED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml
-	xmlns:android
-		ADDED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 INJECTED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Aldi Susanto\capstone\core\src\main\AndroidManifest.xml

@@ -2,10 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="colorBgDetail">#272626</color>
-    <color name="colorEnd">#00979E</color>
     <color name="colorPrimary">#E05327</color>
-    <color name="colorSecondary">#FD835C</color>
-    <color name="colorStart">#006064</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

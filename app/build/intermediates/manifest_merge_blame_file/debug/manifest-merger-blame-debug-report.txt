@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-9        android:targetSdkVersion="33" />
+9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->D:\Aldi Susanto\capstone\app\src\main\AndroidManifest.xml:5:5-66
@@ -32,15 +32,15 @@
 22    </queries>
 23
 24    <permission
-24-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+24-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 25        android:name="com.next.up.code.capstone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-25-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+25-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
 26        android:protectionLevel="signature" />
-26-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+26-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 27
 28    <uses-permission android:name="com.next.up.code.capstone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-28-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-28-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+28-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 29
 30    <application
 30-->D:\Aldi Susanto\capstone\app\src\main\AndroidManifest.xml:6:5-29:19
@@ -49,7 +49,7 @@
 32        android:allowBackup="true"
 32-->D:\Aldi Susanto\capstone\app\src\main\AndroidManifest.xml:8:9-35
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.9.0] C:\Users\ASUS\.gradle\caches\transforms-3\738147d0f85917708540e295877f94a3\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+33-->[androidx.core:core:1.12.0] C:\Users\ASUS\.gradle\caches\transforms-3\fb64bb8d49be8ef5e62369ae7d35e34e\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 34        android:dataExtractionRules="@xml/data_extraction_rules"
 34-->D:\Aldi Susanto\capstone\app\src\main\AndroidManifest.xml:9:9-65
 35        android:debuggable="true"

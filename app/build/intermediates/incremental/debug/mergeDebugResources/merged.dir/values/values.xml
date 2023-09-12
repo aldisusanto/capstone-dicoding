@@ -686,12 +686,9 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="colorAccent">#0340DA</color>
     <color name="colorBgDetail">#272626</color>
-    <color name="colorEnd">#00979E</color>
     <color name="colorPrimary">#E05327</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorSecondary">#FD835C</color>
     <color name="colorStand">#73000000</color>
-    <color name="colorStart">#006064</color>
     <color name="colorTransparent">#FAE8E6</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>

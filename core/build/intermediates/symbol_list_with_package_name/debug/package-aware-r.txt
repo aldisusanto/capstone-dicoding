@@ -1,10 +1,7 @@
 com.next.up.code.core
 color black
 color colorBgDetail
-color colorEnd
 color colorPrimary
-color colorSecondary
-color colorStart
 color purple_200
 color purple_500
 color purple_700
