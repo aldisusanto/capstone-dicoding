@@ -1,7 +1,6 @@
 package com.next.up.code.core.domain.usecase
 
 import com.next.up.code.core.data.Resource
-import com.next.up.code.core.data.api.response.item.VideoTouristAttractionItem
 import com.next.up.code.core.domain.model.GalleryTouristAttraction
 import com.next.up.code.core.domain.model.Rent
 import com.next.up.code.core.domain.model.Ticket

@@ -5,7 +5,7 @@ plugins {
 }
 android {
     namespace = "com.next.up.code.favorite"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -36,7 +36,7 @@ android {
 
 dependencies {
     implementation(project(":app"))
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

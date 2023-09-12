@@ -8,11 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#E05327</color>
-    <color name="colorSecondary">#FD835C</color>
     <color name="colorTransparent">#FAE8E6</color>
     <color name="colorBgDetail">#272626</color>
-    <color name="colorStart">#006064</color>
-    <color name="colorEnd">#00979E</color>
 
     <color name="text_large_semi_bold_color">#4E4E4E</color>
     <color name="text_body_regular_color">#555454</color>

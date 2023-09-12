@@ -12,7 +12,7 @@ import com.next.up.code.core.data.local.entity.TouristAttractionEntity
     version = 1,
     exportSchema = false
 )
-abstract class CapstoneDatabase() : RoomDatabase(), Parcelable {
+abstract class CapstoneDatabase : RoomDatabase(), Parcelable {
 
 
     abstract fun touristAttractionDao(): TouristAttractionDao
