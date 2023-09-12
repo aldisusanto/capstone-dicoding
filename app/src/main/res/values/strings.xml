@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">capstone</string>
+    <string name="text_view_maps">See Locations</string>
+    <string name="text_title_price_ticket">Ticket price</string>
+    <string name="text_gallery">Video Gallery</string>
+    <string name="text_gallery_object">Cultural Property Photo Gallery</string>
+    <string name="text_from">Origin</string>
+    <string name="text_category">Category</string>
+    <string name="text_price">Price</string>
+    <string name="text_place">Place Name</string>
+    <string name="text_title_place">Rent Place</string>
+    <string name="text_mature">Mature</string>
+    <string name="text_child">Children</string>
+    <string name="text_abroad">Abroad</string>
+    <string name="text_domestic">Domestic</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hint_search">Search</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

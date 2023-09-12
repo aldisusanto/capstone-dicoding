@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_mature">Mature</string>
+    <string name="text_child">Children</string>
+    <string name="text_abroad">Abroad</string>
+    <string name="text_domestic">Domestic</string>
+</resources>
