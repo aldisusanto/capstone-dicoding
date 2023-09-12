@@ -1,0 +1,1 @@
+:favorite::debug;Capability: group='capstone', name='favorite'
