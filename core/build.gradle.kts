@@ -36,6 +36,11 @@ android {
                 "BASE_URL",
                 "\"https://sisfodisbudpar.elayanan.info/api/v1/\""
             )
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
 
     }
